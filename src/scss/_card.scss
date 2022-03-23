@@ -1,0 +1,301 @@
+.cards {
+  max-width: 75%;
+  min-width: 60%;
+  height: 90%;
+  z-index: 2;
+  margin: 2em 2em 3em 0;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: $color-light-background;
+  border-radius: $border-radius;
+  box-shadow: 0 0 2em 3em $color-light-background;
+  overflow: auto;
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+
+    h2 {
+      color: $color-accent;
+      font-size: 3em;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.btn-card_close {
+  border: none;
+  align-self: flex-end;
+  margin: 0.5em;
+  font-size: 3em;
+  background-color: transparent;
+  color: $color-accent;
+  cursor: pointer;
+}
+
+//////////////// NEWS
+
+.article {
+  display: flex;
+  border-bottom: 1px solid $color-accent;
+  padding-bottom: 1em;
+  margin-top: 1em;
+
+  &_img {
+    width: 20%;
+  }
+
+  &_text {
+    padding: 1.5em;
+    h1 {
+      color: $color-accent;
+    }
+  }
+}
+
+//////////////// QUARTET
+
+.card_quartet {
+  overflow: auto;
+
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+///// SLIDER
+.slider {
+  height: 60%;
+  width: 70%;
+  position: relative;
+  max-height: 60vh;
+  overflow: hidden;
+
+  &-btn {
+    position: absolute;
+    font-size: 2.5em;
+    z-index: 2;
+    background-color: transparent;
+    color: $color-accent;
+    border-radius: 5px;
+    top: 50%;
+    cursor: pointer;
+
+    &-right {
+      right: 0;
+    }
+    &-left {
+      left: 0;
+    }
+  }
+}
+
+.img_quartet {
+  width: 100%;
+  height: auto;
+  transition: transform 1s;
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots_dot {
+  border: none;
+  background-color: $color-text;
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.dots_dot:last-child {
+  margin: 0;
+}
+
+.dots_dot--active {
+  background-color: $color-accent;
+  transform: scale(1.2);
+  transition: transform 500ms ease;
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+//////////////// MEDIA
+
+.card_media > .card_content {
+  flex-direction: column;
+}
+
+.spotify {
+  max-width: 50%;
+  height: 300px;
+}
+
+//////////////// CONCERTS
+
+.concerts {
+  &_content {
+    width: 100%;
+    border-bottom: 1px solid $color-accent;
+    padding: 2em;
+  }
+
+  &_title {
+    color: $color-accent;
+    font-size: 2em;
+  }
+
+  &_date {
+    margin-bottom: 1.5em;
+  }
+
+  &_time {
+    margin-top: 1em;
+  }
+
+  &_tickets {
+    margin-top: 1em;
+
+    a {
+      color: $color-text;
+    }
+  }
+}
+
+//////////////// CONTACT
+.card_contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  margin: 1em;
+
+  &_gilles {
+    margin-top: 3em;
+  }
+}
+.contacts {
+  line-height: 1.7em;
+  h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.mail_link {
+  text-decoration: none;
+  color: $color-accent;
+}
+
+//////////////// SHOP
+
+.paypal_open {
+  cursor: pointer;
+}
+
+.paypal_img {
+  height: 60%;
+  width: 25%;
+  margin-bottom: 2em;
+}
+
+.paypal_shipping {
+  background-color: white;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: $border-radius;
+  margin: 1em;
+}
+
+.paypal_title {
+  color: $color-accent;
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+#smart-button-container {
+  width: 100%;
+}
+
+////// OPTIMIZED FOR PHONE/TABLET
+
+@media only screen and (max-width: 1200px) {
+  .cards {
+    width: 100%;
+    height: 100%;
+    animation: slideInCard 1s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .card {
+    padding: 1em 0;
+    overflow-x: hidden;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &_content {
+      justify-content: flex-start;
+
+      h2 {
+        margin: 1em 0 0 0;
+      }
+    }
+
+    &_paypal {
+      img {
+        width: 80%;
+      }
+    }
+  }
+
+  .article {
+    flex-direction: column;
+    align-items: center;
+
+    &_img {
+      width: 50%;
+    }
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .paypal_img {
+    height: 30%;
+  }
+}
+
+@keyframes slideInCard {
+  0% {
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

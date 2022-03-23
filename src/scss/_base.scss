@@ -1,0 +1,61 @@
+$color-light-background: rgba(0, 0, 0, 0.644);
+$color-darker-background: rgba(9, 34, 31, 0.8);
+$color-even-darker-background: rgba(1, 15, 13, 0.8);
+$color-text: rgb(224, 242, 252);
+$color-accent: rgb(218, 133, 37);
+$border-radius: 0.5em;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Asap', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  background-image: url('../imgs/gilles-lookSide3.jpg');
+  background-size: cover;
+  overflow: hidden;
+  color: $color-text;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    background-position-x: -500px;
+  }
+  .main {
+    justify-content: center;
+  }
+}
