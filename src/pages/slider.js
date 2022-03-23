@@ -39,7 +39,7 @@ const Slider = () => {
             className={index === curImg ? 'slide active' : 'slide'}
           >
             {index === curImg && (
-              <img src={slide.url} alt="GG4tet" className="img_quartet" />
+              <img src={slide} alt="GG4tet" className="img_quartet" />
             )}
           </div>
         );

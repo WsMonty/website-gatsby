@@ -23,26 +23,24 @@ const Navbar = (props) => {
   };
 
   return (
-    <div className="main">
-      <div className="navbar" navactive={navactive}>
-        <ul className="navbar_links">
-          {links.map((link) => {
-            return (
-              <li key={link.key} className="navbar_link">
-                <Link
-                  to={link.url}
-                  onClick={(e) => {
-                    activate(e);
-                  }}
-                  className="link"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+    <div className="navbar" navactive={navactive}>
+      <ul className="navbar_links">
+        {links.map((link) => {
+          return (
+            <li key={link.key} className="navbar_link">
+              <Link
+                to={link.url}
+                onClick={(e) => {
+                  activate(e);
+                }}
+                className="link"
+              >
+                {link.name}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
