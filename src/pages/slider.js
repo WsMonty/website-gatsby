@@ -1,9 +1,12 @@
-import { BsArrowLeftSquare, BsArrowRightSquare } from 'react-icons/bs';
-import slides from './slider-imgs';
 import React, { useState } from 'react';
+import { BsArrowLeftSquare, BsArrowRightSquare } from 'react-icons/bs';
+import pic1 from '../imgs/GG4tet4_NEW.jpg';
+import pic2 from '../imgs/GG4tet-LAJM.jpeg';
+import pic3 from '../imgs/gilles-LAJM.jpeg';
 
 const Slider = () => {
   const [curImg, setImg] = useState(0);
+  const slides = [pic1, pic2, pic3];
   const length = slides.length;
 
   const prevSlide = () => {

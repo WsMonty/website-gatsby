@@ -12,13 +12,11 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `u1b8ojvtj4ke`,
-        // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: process.env.GATSBY_ACCESS_TOKEN,
       },
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
-    // 'gatsby-plugin-layout',
   ],
 };
