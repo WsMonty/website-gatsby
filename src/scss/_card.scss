@@ -20,6 +20,7 @@
     align-items: center;
     justify-content: center;
     overflow: auto;
+    overflow-x: hidden;
 
     h2 {
       color: $color-accent;
@@ -71,6 +72,7 @@
 
 ///// SLIDER
 .slider {
+  min-height: 50vh;
   width: 50vw;
   position: relative;
   max-height: 60vh;
@@ -131,12 +133,14 @@
 }
 
 .slide {
+  position: absolute;
+  width: 100%;
   opacity: 0;
-  transition: opacity 1.5s ease;
 }
 
-.slide.active {
+.slide-active {
   opacity: 1;
+  transition: opacity 1.5s ease;
 }
 
 //////////////// MEDIA
@@ -146,7 +150,7 @@
 }
 
 .spotify {
-  max-width: 50%;
+  width: 50%;
   height: 300px;
 }
 
@@ -268,6 +272,17 @@
     &_paypal {
       img {
         width: 80%;
+      }
+    }
+
+    &_media {
+      width: 100%;
+      .youtube {
+        width: 100%;
+        height: auto;
+      }
+      .spotify {
+        width: 100%;
       }
     }
   }

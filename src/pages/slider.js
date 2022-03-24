@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { BsArrowLeftSquare, BsArrowRightSquare } from 'react-icons/bs';
-import pic1 from '../imgs/GG4tet4_NEW.jpg';
-import pic2 from '../imgs/GG4tet-LAJM.jpeg';
-import pic3 from '../imgs/gilles-LAJM.jpeg';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Slider = () => {
   const [curImg, setImg] = useState(0);
-  const slides = [pic1, pic2, pic3];
+  const slides = [1, 2, 3];
   const length = slides.length;
 
   const prevSlide = () => {
@@ -32,18 +30,24 @@ const Slider = () => {
         onClick={nextSlide}
       />
 
-      {slides.map((slide, index) => {
-        return (
-          <div
-            key={index}
-            className={index === curImg ? 'slide active' : 'slide'}
-          >
-            {index === curImg && (
-              <img src={slide} alt="GG4tet" className="img_quartet" />
-            )}
-          </div>
-        );
-      })}
+      <StaticImage
+        className={0 === curImg ? 'slide-active' : 'slide'}
+        src="../imgs/GG4tet4_NEW.jpg"
+        alt="Gilles Grethen Quartet 1"
+        placeholder="blurred"
+      />
+      <StaticImage
+        className={1 === curImg ? 'slide-active' : 'slide'}
+        src="../imgs/GG4tet-LAJM.jpeg"
+        alt="Gilles Grethen Quartet 2"
+        placeholder="blurred"
+      />
+      <StaticImage
+        className={2 === curImg ? 'slide-active' : 'slide'}
+        src="../imgs/gilles-LAJM.jpeg"
+        alt="Gilles Grethen Quartet 3"
+        placeholder="blurred"
+      />
       <div className="dots">
         {slides.map((_, i) => {
           return (

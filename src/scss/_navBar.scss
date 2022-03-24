@@ -62,14 +62,14 @@
     }
   }
 
-  .navbar[navactive='0'] > .navbar_links {
-    justify-content: center;
-  }
+  // .navbar[navactive='0'] > .navbar_links {
+  //   justify-content: center;
+  // }
 
-  .navbar[navactive='0'] > .navbar_links > .navbar_link {
-    transform: rotate(0deg);
-    margin: 2em;
-  }
+  // .navbar[navactive='0'] > .navbar_links > .navbar_link {
+  //   transform: rotate(0deg);
+  //   margin: 2em;
+  // }
 
   .home {
     display: none;
