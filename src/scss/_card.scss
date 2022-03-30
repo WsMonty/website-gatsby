@@ -18,7 +18,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     overflow: auto;
     overflow-x: hidden;
     height: 100%;
@@ -237,8 +236,7 @@
 }
 
 .paypal_img {
-  height: 60%;
-  width: 25%;
+  width: 20%;
   margin-bottom: 2em;
 }
 
