@@ -17,30 +17,28 @@ const Navbar = (props) => {
   const activate = (e) => {
     setNavActive(1);
     document
-      .querySelectorAll('.link')
+      .querySelectorAll('.navbar_link')
       .forEach((link) => link.classList.remove('activeLink'));
-    e.target.classList.add('activeLink');
+    e.target.closest('.navbar_link').classList.add('activeLink');
   };
 
   return (
     <div className="navbar" navactive={navactive}>
-      <ul className="navbar_links">
-        {links.map((link) => {
-          return (
-            <li key={link.key} className="navbar_link">
-              <Link
-                to={link.url}
-                onClick={(e) => {
-                  activate(e);
-                }}
-                className="link"
-              >
-                {link.name}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      {links.map((link) => {
+        return (
+          <div key={link.key} className="navbar_link">
+            <Link
+              to={link.url}
+              onClick={(e) => {
+                activate(e);
+              }}
+              className="link"
+            >
+              {link.name}
+            </Link>
+          </div>
+        );
+      })}
     </div>
   );
 };
