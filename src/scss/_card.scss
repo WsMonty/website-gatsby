@@ -21,6 +21,7 @@
     justify-content: center;
     overflow: auto;
     overflow-x: hidden;
+    height: 100%;
 
     h2 {
       color: $color-accent;
@@ -44,9 +45,15 @@
 
 .article {
   display: flex;
+  align-items: flex-start;
+  flex-direction: column;
   border-bottom: 1px solid $color-accent;
   padding-bottom: 1em;
   margin-top: 1em;
+
+  &_date {
+    align-self: flex-end;
+  }
 
   &_img {
     width: 20%;
@@ -57,6 +64,10 @@
     h1 {
       color: $color-accent;
     }
+  }
+
+  &_youtube {
+    transform: scale(0.75);
   }
 }
 
@@ -74,6 +85,7 @@
 .slider {
   min-height: 50vh;
   width: 50vw;
+  height: 100%;
   position: relative;
   max-height: 60vh;
   overflow: hidden;
@@ -141,6 +153,12 @@
 .slide-active {
   opacity: 1;
   transition: opacity 1.5s ease;
+}
+
+.gatsby-image-wrapper {
+  position: absolute !important;
+  width: 100%;
+  left: 0;
 }
 
 //////////////// MEDIA

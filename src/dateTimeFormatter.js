@@ -14,7 +14,7 @@ export const getTime = (date) => {
 
 export const sortByDate = (entries) => {
   const sorted = [];
-  entries.map((entry, i) => {
+  entries.map((entry) => {
     if (sorted.some((el) => el.date.slice(5, 7) < entry.date.slice(5, 7)))
       return sorted.push(entry);
     if (sorted.some((el) => el.date.slice(8, 10) < entry.date.slice(8, 10)))
@@ -23,9 +23,13 @@ export const sortByDate = (entries) => {
 
     return entry;
   });
+  const sortedAfterToday = [];
   sorted.forEach((el, i) => {
     const date = new Date(el.date);
-    if (date - new Date() < 0) sorted.splice(i, 1);
+    const now = new Date();
+    if (date - now >= 0) sortedAfterToday.push(el);
+    console.log(date - now);
   });
-  return sorted;
+
+  return sortedAfterToday;
 };

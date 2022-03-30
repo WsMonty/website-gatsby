@@ -1,18 +1,13 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import React from 'react';
+import timesuite from '../imgs/cover-timeSuite.jpeg';
 
 const Shop = (props) => {
   return (
     <div className="cards">
       <div className="card card_paypal">
         <div className="card_content">
-          <StaticImage
-            src="../imgs/cover-timeSuite.jpeg"
-            alt="Time Suite Cover"
-            placeholder="blurred"
-            className="paypal_img"
-          />
+          <img src={timesuite} alt="Time Suite Cover" className="paypal_img" />
           <div id="smart-button-container">
             <div style={{ textAlign: 'center' }}>
               <div style={{ marginBottom: '1.25rem' }}>
