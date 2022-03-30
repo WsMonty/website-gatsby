@@ -28,8 +28,22 @@ export const sortByDate = (entries) => {
     const date = new Date(el.date);
     const now = new Date();
     if (date - now >= 0) sortedAfterToday.push(el);
-    console.log(date - now);
   });
 
   return sortedAfterToday;
+};
+
+export const sortedByDateKeepAll = (entries) => {
+  const sorted = [];
+  entries.map((entry) => {
+    if (sorted.some((el) => el.date.slice(5, 7) < entry.date.slice(5, 7)))
+      return sorted.push(entry);
+    if (sorted.some((el) => el.date.slice(8, 10) < entry.date.slice(8, 10)))
+      return sorted.push(entry);
+    else sorted.unshift(entry);
+
+    return entry;
+  });
+
+  return sorted;
 };

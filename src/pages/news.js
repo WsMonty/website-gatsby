@@ -1,26 +1,24 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { dateFormatter } from '../dateTimeFormatter';
+import { dateFormatter, sortedByDateKeepAll } from '../dateTimeFormatter';
 
 const News = () => {
   const query = useStaticQuery(graphql`
     {
       allContentfulNews {
-        edges {
-          node {
-            title
-            newsText {
-              newsText
-            }
-            date
-            mediaContent
+        nodes {
+          date
+          title
+          mediaContent
+          newsText {
+            newsText
           }
         }
       }
     }
   `);
 
-  const data = query.allContentfulNews.edges;
+  const data = sortedByDateKeepAll(query.allContentfulNews.nodes);
 
   return (
     <div className="cards">
@@ -31,16 +29,16 @@ const News = () => {
                 return (
                   <div key={i} className="article">
                     <div className="article_text">
-                      <h1>{entry.node.title}</h1>
-                      <p>{entry.node.newsText.newsText}</p>
+                      <h1>{entry.title}</h1>
+                      <p>{entry.newsText.newsText}</p>
                     </div>
-                    {entry.node.mediaContent ? (
+                    {entry.mediaContent ? (
                       <div className="article_media">
                         <iframe
                           width="560"
                           height="315"
                           className="article_youtube"
-                          src={entry.node.mediaContent}
+                          src={entry.mediaContent}
                           title="YouTube video player"
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -48,9 +46,7 @@ const News = () => {
                         ></iframe>
                       </div>
                     ) : null}
-                    <p className="article_date">
-                      {dateFormatter(entry.node.date)}
-                    </p>
+                    <p className="article_date">{dateFormatter(entry.date)}</p>
                   </div>
                 );
               })
