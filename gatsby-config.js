@@ -4,8 +4,8 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `new`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Gilles Grethen`,
+    siteUrl: `https://www.gillesgrethen.com`,
   },
   plugins: [
     {
@@ -15,9 +15,16 @@ module.exports = {
         accessToken: process.env.GATSBY_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: './src/images/favicon.png',
+      },
+    },
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
   ],
 };
