@@ -16,6 +16,7 @@ const Contact = (props) => {
                 <a
                   href="mailto:stephanie@stephaniebaustert.com"
                   className="mail_link"
+                  target="_blank"
                 >
                   stephanie@stephaniebaustert.com
                 </a>
@@ -26,8 +27,12 @@ const Contact = (props) => {
               <h4>Gilles Grethen</h4>
               <p>
                 Mail:{' '}
-                <a href="mailto:gilles@gillesgrethen.com" className="mail_link">
-                  gilles@gillesgrethen.com
+                <a
+                  href="mailto:gilles@gillesgrethen.com"
+                  className="mail_link"
+                  target="_blank"
+                >
+                  grethen.gilles@gmail.com
                 </a>
               </p>
             </div>
