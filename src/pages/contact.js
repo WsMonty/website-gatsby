@@ -32,7 +32,7 @@ const Contact = (props) => {
                   className="mail_link"
                   target="_blank"
                 >
-                  grethen.gilles@gmail.com
+                  gilles@gillesgrethen.com
                 </a>
               </p>
             </div>
