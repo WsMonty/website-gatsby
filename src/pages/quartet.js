@@ -7,7 +7,7 @@ const Quartet = (props) => {
       <div className="card card_quartet">
         <div className="card_content">
           <h2>Gilles Grethen Quartet</h2>
-          <p>
+          <p className="card_quartet_text">
             Luxembourg guitarist Gilles Grethen’s quartet convinces with a rich
             sound diversity and compositions oscillating between traditional and
             modern jazz. Warm harmonies and lyrical melodies, combined with a

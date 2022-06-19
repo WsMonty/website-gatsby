@@ -13,16 +13,8 @@ export const getTime = (date) => {
 };
 
 export const sortByDate = (entries) => {
-  const sorted = [];
-  entries.map((entry) => {
-    if (sorted.some((el) => el.date.slice(5, 7) < entry.date.slice(5, 7)))
-      return sorted.push(entry);
-    if (sorted.some((el) => el.date.slice(8, 10) < entry.date.slice(8, 10)))
-      return sorted.push(entry);
-    else sorted.unshift(entry);
+  const sorted = entries.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-    return entry;
-  });
   const sortedAfterToday = [];
   sorted.forEach((el, i) => {
     const date = new Date(el.date);
@@ -34,16 +26,5 @@ export const sortByDate = (entries) => {
 };
 
 export const sortedByDateKeepAll = (entries) => {
-  const sorted = [];
-  entries.map((entry) => {
-    if (sorted.some((el) => el.date.slice(5, 7) < entry.date.slice(5, 7)))
-      return sorted.push(entry);
-    if (sorted.some((el) => el.date.slice(8, 10) < entry.date.slice(8, 10)))
-      return sorted.push(entry);
-    else sorted.unshift(entry);
-
-    return entry;
-  });
-
-  return sorted;
+  return entries.sort((a, b) => new Date(b.date) - new Date(a.date));
 };

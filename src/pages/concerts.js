@@ -33,7 +33,7 @@ const Concerts = (props) => {
                     <p className="concerts_time">{`Start time: ${getTime(
                       entry.date
                     )}`}</p>
-                    {entry.tickets ? (
+                    {entry.tickets !== 'free' && entry.tickets !== null ? (
                       <p className="concerts_tickets">
                         Tickets and more info:{' '}
                         <a
