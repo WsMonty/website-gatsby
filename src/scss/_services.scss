@@ -23,3 +23,11 @@
     color: $color-accent;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .services {
+    &_description {
+      width: 100%;
+    }
+  }
+}
