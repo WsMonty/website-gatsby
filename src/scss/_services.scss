@@ -1,0 +1,25 @@
+.services {
+  padding: 0.5em 2em;
+  &_title {
+    color: $color-accent;
+    margin: 0.75em 2em 0.75em 0;
+  }
+
+  &_description {
+    width: 50%;
+  }
+  &_line {
+    margin-top: 2em;
+    height: 1px;
+    border: none;
+    background-color: $color-accent;
+  }
+
+  &_article {
+    margin-left: 2em;
+  }
+
+  &_fiverr_url {
+    color: $color-accent;
+  }
+}

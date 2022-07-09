@@ -8,6 +8,7 @@ const Navbar = (props) => {
     { name: 'Quartet', key: 'quartet', url: '/quartet' },
     { name: 'Media', key: 'media', url: '/media' },
     { name: 'Concerts', key: 'concerts', url: '/concerts' },
+    { name: 'Services', key: 'services', url: '/services' },
     { name: 'Contact', key: 'contact', url: '/contact' },
     { name: 'Shop', key: 'shop', url: '/shop' },
   ];

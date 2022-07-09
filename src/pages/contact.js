@@ -17,6 +17,7 @@ const Contact = (props) => {
                   href="mailto:stephanie@stephaniebaustert.com"
                   className="mail_link"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   stephanie@stephaniebaustert.com
                 </a>
@@ -31,6 +32,7 @@ const Contact = (props) => {
                   href="mailto:gilles@gillesgrethen.com"
                   className="mail_link"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   gilles@gillesgrethen.com
                 </a>
