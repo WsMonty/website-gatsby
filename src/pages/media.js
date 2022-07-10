@@ -1,8 +1,16 @@
 import React from 'react';
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 const Media = (props) => {
   return (
     <div className="cards">
+      <GatsbySeo
+        title="Gilles Grethen | Media"
+        description={`Listen to Gilles Grethen's music and watch videos.`}
+        language="en"
+        noindex={false}
+        nofollow={false}
+      />
       <div className="card card_media">
         <div className="card_content">
           <iframe

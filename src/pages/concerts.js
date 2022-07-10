@@ -1,6 +1,7 @@
 import { dateFormatter, getTime, sortByDate } from '../dateTimeFormatter';
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 const Concerts = (props) => {
   const query = useStaticQuery(graphql`
@@ -19,6 +20,13 @@ const Concerts = (props) => {
 
   return (
     <div className="cards">
+      <GatsbySeo
+        title="Gilles Grethen | Concerts"
+        description={`Gilles Grethen's upcoming concerts`}
+        language="en"
+        noindex={false}
+        nofollow={false}
+      />
       <div className="card card_concerts" slide={props.slide}>
         <div className="card_content">
           <h2 className="concerts_title">Upcoming Concerts</h2>

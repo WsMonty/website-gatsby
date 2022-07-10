@@ -1,8 +1,16 @@
 import React from 'react';
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 const Services = () => {
   return (
     <div className="cards">
+      <GatsbySeo
+        title="Gilles Grethen | Services"
+        description={`Gilles Grethen's services including engraving, arranging and composing.`}
+        language="en"
+        noindex={false}
+        nofollow={false}
+      />
       <div className="card services">
         <div className="services_article">
           <h1 className="services_title">Engraving</h1>

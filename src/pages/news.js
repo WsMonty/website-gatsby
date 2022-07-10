@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { dateFormatter, sortedByDateKeepAll } from '../dateTimeFormatter';
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 const News = () => {
   const query = useStaticQuery(graphql`
@@ -22,6 +23,13 @@ const News = () => {
 
   return (
     <div className="cards">
+      <GatsbySeo
+        title="Gilles Grethen | News"
+        description={`News about Gilles Grethen and his music.`}
+        language="en"
+        noindex={false}
+        nofollow={false}
+      />
       <div className="card card_news">
         <div className="card_content_news">
           {query

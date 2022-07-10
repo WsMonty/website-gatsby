@@ -1,10 +1,18 @@
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import React from 'react';
 import timesuite from '../imgs/cover-timeSuite.jpeg';
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 const Shop = (props) => {
   return (
     <div className="cards">
+      <GatsbySeo
+        title="Gilles Grethen | Shop"
+        description={`Gilles Grethen's webshop for buying his CDs.`}
+        language="en"
+        noindex={false}
+        nofollow={false}
+      />
       <div className="card card_paypal">
         <div className="card_content">
           <img src={timesuite} alt="Time Suite Cover" className="paypal_img" />
