@@ -1,9 +1,17 @@
 import Slider from './slider';
 import React from 'react';
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 const Quartet = (props) => {
   return (
     <div className="cards">
+      <GatsbySeo
+        title="Gilles Grethen | Quartet"
+        description={`Gilles Grethen Quartet Page`}
+        language="en"
+        noindex={false}
+        nofollow={false}
+      />
       <div className="card card_quartet">
         <div className="card_content">
           <h2>Gilles Grethen Quartet</h2>
