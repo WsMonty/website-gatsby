@@ -1,0 +1,27 @@
+.article {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border-bottom: 1px solid $color-accent;
+  padding-bottom: 1em;
+  margin-top: 1em;
+
+  &_date {
+    align-self: flex-end;
+  }
+
+  &_img {
+    width: 20%;
+  }
+
+  &_text {
+    padding: 1.5em;
+    h1 {
+      color: $color-accent;
+    }
+  }
+
+  &_youtube {
+    transform: scale(0.75);
+  }
+}

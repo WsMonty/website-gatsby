@@ -17,7 +17,7 @@ const Services = () => {
           <p className="services_description">
             I can beautifully engrave your handwritten or pdf sheet music into
             ready to play and publish scores and parts! Hit me up with your
-            project, so I can give your custom offer!
+            project, so I can give you your custom offer!
           </p>
         </div>
         <hr className="services_line" />

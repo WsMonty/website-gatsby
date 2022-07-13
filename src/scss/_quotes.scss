@@ -1,0 +1,64 @@
+.quotes {
+  padding: 2em 5em;
+  display: flex;
+  width: 65%;
+  height: 30%;
+
+  position: relative;
+
+  &_text {
+    font-size: 1.2em;
+    margin: 0 2em 2em 2em;
+    text-align: center;
+  }
+
+  &_author {
+    font-size: 2em;
+    text-align: center;
+    color: $color-accent;
+  }
+  &_btn {
+    background-color: transparent;
+    border: none;
+    color: $color-accent;
+    font-size: 3em;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+
+    &_left {
+      left: 0;
+    }
+
+    &_right {
+      right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .quotes {
+    width: 100%;
+    height: 25em;
+    padding: 0;
+    margin-bottom: 1em;
+
+    &_text {
+      font-size: 1em;
+      width: 100%;
+      margin: 0;
+    }
+
+    &_author {
+      font-size: 1.2em;
+      margin-top: 1em;
+    }
+
+    &_btn {
+      display: none;
+    }
+  }
+}

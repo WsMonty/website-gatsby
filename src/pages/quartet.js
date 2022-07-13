@@ -1,6 +1,7 @@
-import Slider from './slider';
+import Slider from './components/slider';
 import React from 'react';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
+import Quotes from './components/quotes';
 
 const Quartet = (props) => {
   return (
@@ -23,8 +24,12 @@ const Quartet = (props) => {
             guitar sound, are the ingredients of their music. Both motives
             developed in unison and bold improvisations reveal the complicity of
             the four musicians. The Gilles Grethen Quartet released its debut
-            album “Time Suite” on 28 May 2021 on Double Moon Records.
+            album 'Time Suite' on 28 May 2021 on Double Moon Records. <br />
+            <br /> A second album is coming on 21st October! The title of the
+            new album is 'State of Mind' and it features the Gilles Grethen
+            Quartet along with 11 amazing string players!
           </p>
+          <Quotes />
           <Slider />
         </div>
       </div>

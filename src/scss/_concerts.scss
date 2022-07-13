@@ -1,0 +1,28 @@
+.concerts {
+  &_content {
+    width: 100%;
+    border-bottom: 1px solid $color-accent;
+    padding: 2em;
+  }
+
+  &_title {
+    color: $color-accent;
+    font-size: 2em;
+  }
+
+  &_date {
+    margin-bottom: 1.5em;
+  }
+
+  &_time {
+    margin-top: 1em;
+  }
+
+  &_tickets {
+    margin-top: 1em;
+
+    a {
+      color: $color-text;
+    }
+  }
+}

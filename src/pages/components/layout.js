@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <div className="main">
       <GatsbySeo
         title="Gilles Grethen"
-        description={`Gilles Grethen\'s Website about his music and projects.`}
+        description={`Gilles Grethen's Website about his music and projects.`}
         language="en"
         noindex={false}
         nofollow={false}

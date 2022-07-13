@@ -1,0 +1,25 @@
+.card_contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  margin: 1em;
+
+  &_gilles {
+    margin-top: 3em;
+  }
+}
+.contacts {
+  line-height: 1.7em;
+  h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.mail_link {
+  text-decoration: none;
+  color: $color-accent;
+}
