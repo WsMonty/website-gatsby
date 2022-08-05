@@ -24,4 +24,13 @@
   &_youtube {
     transform: scale(0.75);
   }
+
+  &_link {
+    color: $color-accent;
+    padding: 1.5em;
+  }
+
+  &_image {
+    margin-left: 1.5em;
+  }
 }

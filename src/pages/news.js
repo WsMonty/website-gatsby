@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { dateFormatter, sortedByDateKeepAll } from '../dateTimeFormatter';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const News = () => {
   const query = useStaticQuery(graphql`
@@ -13,6 +14,14 @@ const News = () => {
           mediaContent
           newsText {
             newsText
+          }
+          link
+          media {
+            gatsbyImageData(
+              placeholder: BLURRED
+              layout: CONSTRAINED
+              width: 200
+            )
           }
         }
       }
@@ -54,6 +63,27 @@ const News = () => {
                         ></iframe>
                       </div>
                     ) : null}
+                    {entry.link ? (
+                      <a
+                        href={entry.link}
+                        target={'_blank'}
+                        rel="noreferrer"
+                        className="article_link"
+                      >
+                        {entry.link}
+                      </a>
+                    ) : (
+                      ''
+                    )}
+                    {entry.media ? (
+                      <GatsbyImage
+                        image={entry.media.gatsbyImageData}
+                        alt="Logo"
+                        className="article_image"
+                      />
+                    ) : (
+                      ''
+                    )}
                     <p className="article_date">{dateFormatter(entry.date)}</p>
                   </div>
                 );

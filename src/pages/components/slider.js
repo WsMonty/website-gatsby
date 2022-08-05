@@ -31,19 +31,25 @@ const Slider = () => {
       />
 
       <StaticImage
-        className={0 === curImg ? 'slide-active' : 'slide'}
+        className={
+          0 === curImg ? 'slider_img slide-active' : 'slider_img slide'
+        }
         src="../../imgs/GG4tet4_NEW.jpg"
         alt="Gilles Grethen Quartet 1"
         placeholder="blurred"
       />
       <StaticImage
-        className={1 === curImg ? 'slide-active' : 'slide'}
+        className={
+          1 === curImg ? 'slider_img slide-active' : 'slider_img slide'
+        }
         src="../../imgs/GG4tet-LAJM.jpeg"
         alt="Gilles Grethen Quartet 2"
         placeholder="blurred"
       />
       <StaticImage
-        className={2 === curImg ? 'slide-active' : 'slide'}
+        className={
+          2 === curImg ? 'slider_img slide-active' : 'slider_img slide'
+        }
         src="../../imgs/gilles-LAJM.jpeg"
         alt="Gilles Grethen Quartet 3"
         placeholder="blurred"

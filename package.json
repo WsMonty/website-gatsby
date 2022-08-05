@@ -17,7 +17,7 @@
   "dependencies": {
     "@paypal/react-paypal-js": "^7.6.0",
     "dotenv": "^16.0.0",
-    "gatsby": "^4.10.2",
+    "gatsby": "^4.21.0",
     "gatsby-plugin-image": "^2.10.1",
     "gatsby-plugin-manifest": "^4.11.0",
     "gatsby-plugin-next-seo": "^1.10.0",
