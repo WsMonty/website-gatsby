@@ -10,7 +10,18 @@
   &_gilles {
     margin-top: 3em;
   }
+  &_socials {
+    display: flex;
+    gap: 2em;
+    margin-top: 2em;
+
+    &_logo {
+      width: 75px;
+      height: 75px;
+    }
+  }
 }
+
 .contacts {
   line-height: 1.7em;
   h3 {

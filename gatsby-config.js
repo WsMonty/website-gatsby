@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Gilles Grethen`,
-    siteUrl: `https://www.gillesgrethen.com`,
+    siteUrl: `https://gillesgrethen.com`,
   },
   plugins: [
     {
@@ -27,5 +27,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-next-seo',
+    'gatsby-plugin-sitemap',
   ],
 };
