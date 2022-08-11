@@ -5,10 +5,11 @@
     animation: slideInCard 1s ease-out;
     animation-fill-mode: forwards;
     margin-left: 1em;
+    padding-bottom: 3em;
   }
 
   .card {
-    padding: 1em 0;
+    padding: 1em 0 3em 0;
     overflow-x: hidden;
     width: 100%;
 
