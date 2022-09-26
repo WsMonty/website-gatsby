@@ -2,19 +2,6 @@
   cursor: pointer;
 }
 
-.paypal_img {
-  width: 20%;
-  margin-bottom: 2em;
-}
-
-.paypal_shipping {
-  background-color: white;
-  padding: 1em;
-  border: 1px solid black;
-  border-radius: $border-radius;
-  margin: 1em;
-}
-
 .paypal_title {
   color: $color-accent;
   margin-bottom: 1em;
@@ -23,4 +10,99 @@
 
 #smart-button-container {
   width: 100%;
+}
+
+.card_shop {
+  position: relative;
+  &_content {
+    padding: 2em;
+  }
+
+  &_article {
+    display: flex;
+    gap: 2em;
+
+    margin-bottom: 2em;
+
+    &_information {
+      padding: 2em;
+      line-height: 4em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &_cover {
+    width: 30%;
+    border-radius: 2em;
+  }
+
+  hr {
+    margin: 2em;
+    border: none;
+    height: 2px;
+    background-color: $color-accent;
+  }
+
+  &_cart_icon {
+    font-size: 2em;
+    color: white;
+
+    &_btn {
+      background: none;
+      border: none;
+      position: absolute;
+      right: 5%;
+      top: 5%;
+      cursor: pointer;
+    }
+  }
+
+  &_addToCart_btn {
+    background-color: white;
+    padding: 1em 2em;
+    border-radius: 2em;
+    border: 1px solid white;
+    cursor: pointer;
+
+    transition: 250ms ease-in-out;
+
+    &:hover {
+      background-color: black;
+      color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+
+  &_cancel_btn {
+    background: white;
+    border: 1px solid white;
+    padding: 1em 2em;
+    border-radius: 2em;
+    cursor: pointer;
+    margin-left: 2em;
+
+    transition: 250ms ease-in-out;
+
+    &:hover {
+      background: black;
+      color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+}
+
+.nothing {
+  background-color: white;
+  padding: 1em 2em;
+  border-radius: 2em;
+  border: 1px solid white;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card_shop_article_information {
+    padding: 0;
+  }
 }

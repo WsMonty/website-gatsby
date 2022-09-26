@@ -1,0 +1,72 @@
+.shoppingCart {
+  background-color: white;
+  width: 20vw;
+  height: 50vh;
+
+  z-index: 99;
+
+  position: absolute;
+  top: 10%;
+  right: 0%;
+
+  border-radius: 2em;
+  padding: 2em;
+
+  color: black;
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_cd {
+    display: grid;
+    grid-template-columns: 70% 15% 15%;
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid black;
+  }
+
+  &_delete_btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  &_payment_btn {
+    background: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 2em;
+    padding: 1em 2em;
+    width: fit-content;
+    align-self: center;
+    margin-top: 1em;
+    cursor: pointer;
+
+    transition: 250ms ease-in-out;
+
+    &:hover {
+      background: black;
+      color: $color-accent;
+      border: 1px solid $color-accent;
+    }
+  }
+}
+
+.paypal_shipping {
+  background-color: white;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 2em;
+  margin: 1em;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .shoppingCart {
+    width: 100%;
+    border: 1px solid black;
+  }
+}
