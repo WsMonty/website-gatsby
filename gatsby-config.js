@@ -9,6 +9,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-TK35FM6',
+        includeInDevelopment: false,
+        enableWebVitalsTracking: true,
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `u1b8ojvtj4ke`,

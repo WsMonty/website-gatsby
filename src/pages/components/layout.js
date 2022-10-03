@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../nav.js';
 import '../../scss/main.scss';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
+import CookieConsent from 'react-cookie-consent';
 
 const Layout = ({ children }) => {
   return (
@@ -15,6 +16,13 @@ const Layout = ({ children }) => {
       />
       <Navbar />
       {children}
+      <CookieConsent
+        cookieName="Google Fonts"
+        buttonStyle={{ backgroundColor: '#da8525', fontSize: '13px' }}
+        style={{ background: '#1E1E1E' }}
+      >
+        This website uses cookies to improve user experience!
+      </CookieConsent>
     </div>
   );
 };
