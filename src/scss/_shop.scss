@@ -77,8 +77,8 @@
   }
 
   &_cancel_btn {
-    background: white;
-    border: 1px solid white;
+    background: $color-text;
+    border: 1px solid $color-text;
     padding: 1em 2em;
     border-radius: 2em;
     cursor: pointer;

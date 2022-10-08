@@ -1,0 +1,39 @@
+.userentry {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1em;
+    padding: 2em;
+  }
+
+  &_textinput {
+    background-color: $color-text;
+    padding: 1em;
+    border-radius: 2em;
+  }
+
+  &_select {
+    background-color: $color-text;
+    padding: 1em;
+    border-radius: 2em;
+    cursor: pointer;
+  }
+
+  &_submitbtn {
+    width: fit-content;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .userentry {
+    &_form {
+      width: 100%;
+    }
+  }
+}

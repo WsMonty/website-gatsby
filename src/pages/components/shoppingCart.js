@@ -3,7 +3,7 @@ import { store } from '../../store';
 import {
   deleteFromCart,
   showPayment,
-  addShipping,
+  showUserEntryPage,
 } from '../../reducers/cartReducer';
 import { BsTrashFill } from 'react-icons/bs';
 
@@ -27,10 +27,7 @@ const ShoppingCart = ({ props }) => {
 
   const paymentBtnHandler = () => {
     store.dispatch(showPayment(true));
-  };
-
-  const shippingSelected = () => {
-    return document.querySelector('.paypal_shipping').selectedIndex > 0;
+    store.dispatch(showUserEntryPage(true));
   };
 
   return (
@@ -52,32 +49,10 @@ const ShoppingCart = ({ props }) => {
               </div>
             );
           })}
-          <select className="paypal_shipping" id="item-options" required>
-            <option value="" hidden>
-              Select shipping
-            </option>
-            <option value="Shipping to Germany" price={1.6}>
-              Shipping to Germany - 1.60 EUR
-            </option>
-            <option value="Shipping International" price={3.7}>
-              Shipping International - 3.70 EUR
-            </option>
-          </select>
+
           <button
             className="shoppingCart_payment_btn"
             onClick={() => {
-              if (!shippingSelected()) {
-                alert('Please select shipping');
-                return;
-              }
-              const shipping =
-                document.querySelector('.paypal_shipping').value ===
-                'Shipping to Germany'
-                  ? 1.6
-                  : 3.7;
-
-              store.dispatch(addShipping(shipping));
-
               paymentBtnHandler();
             }}
           >

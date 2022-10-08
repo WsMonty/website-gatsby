@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import { StaticImage } from 'gatsby-plugin-image';
 import { FaShoppingCart } from 'react-icons/fa';
-import { store, selectPayment, selectCart } from '../store';
+import { store, selectPayment, selectCart, selectUserEntry } from '../store';
 import { addToCart, goBackDev } from '../reducers/cartReducer.js';
 import ShoppingCart from './components/shoppingCart';
 import { useSelector } from 'react-redux';
 import Payment from './components/payment';
+import UserEntry from './components/userEntry';
 
 const Shop = () => {
   const cart = useSelector(selectCart);
@@ -14,6 +15,7 @@ const Shop = () => {
   const [showCart, setShowCart] = useState('hidden');
 
   const paymentBool = useSelector(selectPayment);
+  const userEntryBool = useSelector(selectUserEntry);
 
   const addToCartHandler = (e) => {
     const cd = e.target.dataset.title;
@@ -43,7 +45,8 @@ const Shop = () => {
       {paymentBool ? (
         <div className="card card_shop">
           <div className="card_shop_content">
-            <Payment cart={cart} />
+            {userEntryBool ? <UserEntry /> : <Payment cart={cart} />}
+
             <button
               className="card_shop_cancel_btn"
               onClick={goBackDevelopment}

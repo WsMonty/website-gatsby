@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   cart: {},
+  userEntry: false,
   payment: false,
   shippingCost: 0,
 };
@@ -23,6 +24,10 @@ const cartReducer = createSlice({
       }
       state.cart[action.payload] -= 1;
     },
+    showUserEntryPage: (state, action) => {
+      state.userEntry = action.payload;
+      return;
+    },
     showPayment: (state, action) => {
       state.payment = action.payload;
       return;
@@ -40,6 +45,7 @@ const cartReducer = createSlice({
 export const {
   addToCart,
   deleteFromCart,
+  showUserEntryPage,
   showPayment,
   goBackDev,
   addShipping,

@@ -20,5 +20,6 @@ export const store = configureStore({
 export const selectCart = (state) => state.cart;
 export const selectPayment = (state) => state.payment;
 export const selectShipping = (state) => state.shippingCost;
+export const selectUserEntry = (state) => state.userEntry;
 
 export const persistor = persistStore(store);
