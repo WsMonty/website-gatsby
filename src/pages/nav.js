@@ -23,6 +23,20 @@ const Navbar = (props) => {
     e.target.closest('.navbar_link').classList.add('activeLink');
   };
 
+  // const socialsBtnHandler = () => {
+  //   const socialsCont = document.querySelector(
+  //     '.navbar_link_socials_container'
+  //   );
+
+  //   if (socialsCont.style.display === 'flex') {
+  //     socialsCont.style.display = 'none';
+  //     return;
+  //   }
+
+  //   socialsCont.style.display = 'flex';
+  //   socialsCont.style.display = 'none';
+  // };
+
   return (
     <div className="navbar" navactive={navactive}>
       {links.map((link) => {
@@ -40,6 +54,19 @@ const Navbar = (props) => {
           </div>
         );
       })}
+      {/* <div className="navbar_link">
+        <button
+          className="navbar_link_socials link"
+          onClick={socialsBtnHandler}
+        >
+          Socials
+        </button>
+      </div>
+      <div className="navbar_link_socials_container">
+        <div>Youtube</div>
+        <div>Insta</div>
+        <div>Face</div>
+      </div> */}
     </div>
   );
 };
