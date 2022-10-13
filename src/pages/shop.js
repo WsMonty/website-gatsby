@@ -31,8 +31,6 @@ const Shop = () => {
     store.dispatch(goBackDev());
   };
 
-  const nothing = () => {};
-
   return (
     <div className="cards">
       <GatsbySeo
@@ -74,11 +72,11 @@ const Shop = () => {
                 </h2>
                 <h3 className="card_shop_price">15,00€ + shipping cost</h3>
                 <button
-                  className="nothing"
-                  onClick={nothing}
+                  className="card_shop_addToCart_btn"
+                  onClick={(e) => addToCartHandler(e)}
                   data-title="state-of-mind"
                 >
-                  Available from 21st october!
+                  Preorder now!
                 </button>
               </div>
             </div>
