@@ -1,6 +1,5 @@
 import React from 'react';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
-import { StaticImage } from 'gatsby-plugin-image';
 
 const Contact = (props) => {
   return (
@@ -46,32 +45,6 @@ const Contact = (props) => {
                   gilles@gillesgrethen.com
                 </a>
               </p>
-              <div className="contact_socials">
-                <a
-                  href="https://www.facebook.com/gillesgrethen"
-                  target={'_blank'}
-                  rel="noreferrer"
-                  className="contact_socials_link"
-                >
-                  <StaticImage
-                    className="contact_socials_logo"
-                    src="../imgs/fb-logo.png"
-                    alt="Facebook Logo"
-                  />
-                </a>
-                <a
-                  href="https://www.instagram.com/gilles_grethen_/"
-                  target={'_blank'}
-                  rel="noreferrer"
-                  className="contact_socials_link"
-                >
-                  <StaticImage
-                    className="contact_socials_logo"
-                    src="../imgs/insta-logo.png"
-                    alt="Instagram Logo"
-                  />
-                </a>
-              </div>
             </div>
           </div>
         </div>

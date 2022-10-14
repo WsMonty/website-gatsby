@@ -3,6 +3,7 @@ import Navbar from '../nav.js';
 import '../../scss/main.scss';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import CookieConsent from 'react-cookie-consent';
+import SideSocials from './sideSocials.js';
 
 const Layout = ({ children }) => {
   return (
@@ -16,6 +17,7 @@ const Layout = ({ children }) => {
       />
       <Navbar />
       {children}
+      <SideSocials />
       <CookieConsent
         cookieName="Google Fonts"
         buttonStyle={{ backgroundColor: '#da8525', fontSize: '13px' }}

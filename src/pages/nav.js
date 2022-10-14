@@ -19,8 +19,8 @@ const Navbar = (props) => {
     setNavActive(1);
     document
       .querySelectorAll('.navbar_link')
-      .forEach((link) => link.classList.remove('activeLink'));
-    e.target.closest('.navbar_link').classList.add('activeLink');
+      .forEach((link) => link.firstChild.classList.remove('activeLink'));
+    e.target.closest('.navbar_link').firstChild.classList.add('activeLink');
   };
 
   return (
