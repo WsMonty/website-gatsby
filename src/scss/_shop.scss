@@ -19,8 +19,9 @@
   }
 
   &_article {
-    display: flex;
-    gap: 2em;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 3em;
 
     margin-bottom: 2em;
 
@@ -105,5 +106,25 @@
 @media only screen and (max-width: 1200px) {
   .card_shop_article_information {
     padding: 0;
+  }
+
+  .card_shop {
+    &_content {
+      padding: 1em;
+    }
+
+    &_article {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    &_cover {
+      width: 100%;
+    }
+
+    &_cart_icon_btn {
+      top: 0;
+      right: 0;
+    }
   }
 }

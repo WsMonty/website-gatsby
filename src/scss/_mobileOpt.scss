@@ -49,25 +49,6 @@
       width: 50%;
     }
   }
-
-  .card_shop {
-    &_content {
-      padding: 1em;
-    }
-
-    &_article {
-      flex-direction: column;
-    }
-
-    &_cover {
-      width: 100%;
-    }
-
-    &_cart_icon_btn {
-      top: 0;
-      right: 0;
-    }
-  }
 }
 
 @keyframes slideInCard {
