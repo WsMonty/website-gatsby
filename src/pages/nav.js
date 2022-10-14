@@ -23,19 +23,18 @@ const Navbar = (props) => {
     e.target.closest('.navbar_link').classList.add('activeLink');
   };
 
-  // const socialsBtnHandler = () => {
-  //   const socialsCont = document.querySelector(
-  //     '.navbar_link_socials_container'
-  //   );
+  const socialsBtnHandler = () => {
+    const socialsCont = document.querySelector(
+      '.navbar_link_socials_container'
+    );
 
-  //   if (socialsCont.style.display === 'flex') {
-  //     socialsCont.style.display = 'none';
-  //     return;
-  //   }
+    if (socialsCont.style.display === 'flex') {
+      socialsCont.style.display = 'none';
+      return;
+    }
 
-  //   socialsCont.style.display = 'flex';
-  //   socialsCont.style.display = 'none';
-  // };
+    socialsCont.style.display = 'flex';
+  };
 
   return (
     <div className="navbar" navactive={navactive}>
@@ -54,7 +53,7 @@ const Navbar = (props) => {
           </div>
         );
       })}
-      {/* <div className="navbar_link">
+      <div className="navbar_link">
         <button
           className="navbar_link_socials link"
           onClick={socialsBtnHandler}
@@ -66,7 +65,7 @@ const Navbar = (props) => {
         <div>Youtube</div>
         <div>Insta</div>
         <div>Face</div>
-      </div> */}
+      </div>
     </div>
   );
 };
