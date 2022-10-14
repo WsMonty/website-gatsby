@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { useState } from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Navbar = (props) => {
   const links = [
@@ -23,6 +24,19 @@ const Navbar = (props) => {
     e.target.closest('.navbar_link').firstChild.classList.add('activeLink');
   };
 
+  const socialsBtnHandler = () => {
+    const socialsCont = document.querySelector(
+      '.navbar_link_socials_container'
+    );
+
+    if (socialsCont.style.display === 'flex') {
+      socialsCont.style.display = 'none';
+      return;
+    }
+
+    socialsCont.style.display = 'flex';
+  };
+
   return (
     <div className="navbar" navactive={navactive}>
       {links.map((link) => {
@@ -40,6 +54,57 @@ const Navbar = (props) => {
           </div>
         );
       })}
+      <div className="navbar_link">
+        <button
+          className="navbar_link_socials link"
+          onClick={socialsBtnHandler}
+        >
+          Socials
+        </button>
+      </div>
+      <div className="navbar_link_socials_container">
+        <a
+          href="https://www.instagram.com/gilles_grethen_/"
+          target={'_blank'}
+          rel="noreferrer"
+          className="navbar_link_socials_icon_link"
+        >
+          <StaticImage
+            className="navbar_link_socials_icon"
+            src="../../imgs/Insta-logo-whiteblue.png"
+            alt="Instagram Logo"
+            placeholder="blurred"
+          />
+        </a>
+
+        <a
+          href="https://www.youtube.com/channel/UCgZez7ebsQQFIO83RDIj8zQ"
+          target={'_blank'}
+          rel="noreferrer"
+          className="navbar_link_socials_icon_link"
+        >
+          <StaticImage
+            className="navbar_link_socials_icon"
+            src="../../imgs/yt-logo-whiteblue.png"
+            alt="Youtube Logo"
+            placeholder="blurred"
+          />
+        </a>
+
+        <a
+          href="https://www.facebook.com/gillesgrethen"
+          target={'_blank'}
+          rel="noreferrer"
+          className="navbar_link_socials_icon_link"
+        >
+          <StaticImage
+            className="navbar_link_socials_icon"
+            src="../../imgs/fb-logo-whiteblue.png"
+            alt="Facebook Logo"
+            placeholder="blurred"
+          />
+        </a>
+      </div>
     </div>
   );
 };
