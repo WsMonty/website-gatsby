@@ -14,22 +14,35 @@ const Media = (props) => {
       <div className="card card_media">
         <div className="card_content">
           <iframe
+            title="Spotify Player State of Mind"
+            style={{ borderRadius: '12px' }}
+            className="card_media_spotify"
+            src="https://open.spotify.com/embed/album/19xZqiZQPjbpNcevvPE0BC?utm_source=generator"
+            width="100%"
+            height="380"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+          <iframe
             width="560"
             height="315"
             src="https://www.youtube.com/embed/wLMuRnlkdIQ"
             title="YouTube video player"
-            className="youtube"
+            className="card_media_youtube"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
+
           <iframe
+            className="card_media_spotify"
             style={{ borderRadius: '12px' }}
             src="https://open.spotify.com/embed/album/1q7hq6f4FwFJFzzR7RkBXB?utm_source=generator"
             width="100%"
             height="380"
-            title="Spotify Player"
-            className="spotify"
+            title="Spotify Player Time Suite"
             frameBorder="0"
             allowFullScreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

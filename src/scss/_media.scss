@@ -2,7 +2,28 @@
   flex-direction: column;
 }
 
-.spotify {
-  width: 50%;
-  height: 300px;
+.card_media_spotify {
+  width: 70%;
+  margin-bottom: 1em;
+  height: 100%;
+}
+
+.card_media_youtube {
+  border-radius: 12px;
+  width: 70%;
+  margin-bottom: 1em;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card_media {
+    width: 100%;
+    &_youtube {
+      width: 100%;
+      height: auto;
+    }
+    &_spotify {
+      width: 100%;
+    }
+  }
 }

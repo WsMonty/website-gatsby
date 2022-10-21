@@ -76,7 +76,7 @@ const Shop = () => {
                   onClick={(e) => addToCartHandler(e)}
                   data-title="state-of-mind"
                 >
-                  Preorder now!
+                  Add to cart
                 </button>
               </div>
             </div>
