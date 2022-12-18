@@ -4,6 +4,7 @@ import {
   deleteFromCart,
   showPayment,
   showUserEntryPage,
+  totalPriceSub,
 } from '../../reducers/cartReducer';
 import { BsTrashFill } from 'react-icons/bs';
 
@@ -20,9 +21,11 @@ const ShoppingCart = ({ props }) => {
   };
 
   const deleteHandler = (e) => {
-    store.dispatch(
-      deleteFromCart(e.target.closest('.shoppingCart_delete_btn').dataset.title)
-    );
+    const el = e.target.closest('.shoppingCart_delete_btn').dataset.title;
+    store.dispatch(deleteFromCart(el));
+
+    const price = el.match(/LP/) ? '35' : '15';
+    store.dispatch(totalPriceSub(price));
   };
 
   const paymentBtnHandler = () => {

@@ -1,25 +1,19 @@
 import React from 'react';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import { useSelector } from 'react-redux';
-import { selectShipping, store } from '../../store';
+import { selectShipping, store, selectTotalPrice } from '../../store';
 import { showPayment } from '../../reducers/cartReducer';
 
 const Payment = ({ cart }) => {
   const shipping = useSelector(selectShipping);
-
-  const totalPrice = () => {
-    const totalCDs = Object.keys(cart)
-      .map((cd) => cart[cd])
-      .reduce((acc, count) => (acc += count));
-
-    return +shipping + totalCDs * 15;
-  };
+  const price = useSelector(selectTotalPrice);
+  const totalPrice = +price + +shipping;
 
   return (
     <div className="payment">
       <h3 className="payment_total">
-        Total amount to pay: {totalPrice().toFixed(2).replace('.', ',')}€ (CDs:{' '}
-        {(totalPrice() - +shipping).toFixed(2).replace('.', ',')}€ + Shipping:{' '}
+        Total amount to pay: {(price + shipping).toFixed(2).replace('.', ',')}€
+        (CDs and/or LPs: {price.toFixed(2).replace('.', ',')}€, shipping:{' '}
         {shipping.toFixed(2).replace('.', ',')}€)
       </h3>
       <PayPalScriptProvider
@@ -36,7 +30,7 @@ const Payment = ({ cart }) => {
               purchase_units: [
                 {
                   amount: {
-                    value: totalPrice(),
+                    value: totalPrice,
                   },
                 },
               ],
