@@ -2,13 +2,7 @@ import React, { useState } from 'react';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import { StaticImage } from 'gatsby-plugin-image';
 import { FaShoppingCart } from 'react-icons/fa';
-import {
-  store,
-  selectPayment,
-  selectCart,
-  selectUserEntry,
-  selectTotalPrice,
-} from '../store';
+import { store, selectPayment, selectCart, selectUserEntry } from '../store';
 import {
   addToCart,
   goBackDev,

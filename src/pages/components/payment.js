@@ -9,6 +9,8 @@ const Payment = ({ cart }) => {
   const price = useSelector(selectTotalPrice);
   const totalPrice = +price + +shipping;
 
+  console.log(shipping);
+
   return (
     <div className="payment">
       <h3 className="payment_total">

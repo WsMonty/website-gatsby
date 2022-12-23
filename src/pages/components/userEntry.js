@@ -1,13 +1,29 @@
 import React from 'react';
 import CountryList from './countryList';
 import { showUserEntryPage, addShipping } from '../../reducers/cartReducer';
-import { store } from '../../store';
+import { store, selectCart } from '../../store';
+import { useSelector } from 'react-redux';
 
 const UserEntry = () => {
+  const cart = useSelector(selectCart);
+
+  console.log(cart);
+
   const submitForm = (e) => {
     e.preventDefault();
     const country = document.querySelector('.userentry_select')?.value;
-    const shipping = country === 'Germany' ? 1.6 : 3.7;
+    let shipping = country === 'Germany' ? 1.6 : 3.7;
+
+    if (
+      Object.keys(cart).some((title) => title.match(/LP/)) &&
+      Object.keys(cart).length === 1
+    )
+      shipping = 6.0;
+    if (
+      Object.keys(cart).some((title) => title.match(/LP/)) &&
+      Object.keys(cart).length > 1
+    )
+      shipping += 6.0;
 
     store.dispatch(addShipping(shipping));
 
